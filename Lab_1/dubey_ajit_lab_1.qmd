@@ -1,0 +1,24 @@
+---
+title: "Lab_1 Diamond Size"
+author: "Ajit Kumar Dubey U30552058"
+format: html
+date: 08/23/2023
+---
+
+```{r}
+#| label: Setup
+#| include: false
+
+library(tidyverse)
+library(ggplot2)
+
+smaller <- diamonds |> 
+  filter(carat <= 2.5)
+
+smaller
+
+#nrow(smaller)
+
+```
+
+We have data about `r nrow(diamonds)` diamonds. Only `r nrow(diamonds) - nrow(smaller)` are larger than 2.5 carats. The distribution of the remainder is shown below:
